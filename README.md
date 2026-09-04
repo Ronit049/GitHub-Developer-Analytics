@@ -77,7 +77,6 @@ The site is ready for any static host, including GitHub Pages, Netlify, or Verce
 ## License
 
 This project is available under the [MIT License](LICENSE).
-<<<<<<< HEAD
 
 
 ---
@@ -88,7 +87,7 @@ This project is available under the [MIT License](LICENSE).
   <a href="https://github.com/Ronit049">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-  <a href="www.linkedin.com/in/ronit-raj7497">
+  <a href="ronit-raj7497">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
   <a href="https://rsr-portfolio.vercel.app/">
