@@ -76,4 +76,4 @@ The site is ready for any static host, including GitHub Pages, Netlify, or Verce
 
 ## License
 
-No license has been selected yet. Add one before distributing or accepting external contributions.
+This project is available under the [MIT License](LICENSE).
