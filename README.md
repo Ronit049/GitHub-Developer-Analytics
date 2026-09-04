@@ -77,6 +77,7 @@ The site is ready for any static host, including GitHub Pages, Netlify, or Verce
 ## License
 
 This project is available under the [MIT License](LICENSE).
+<<<<<<< HEAD
 
 
 ---
@@ -108,3 +109,5 @@ This project is available under the [MIT License](LICENSE).
 <p align="center">
   Made with ❤️ by <b>YOUR NAME</b>
 </p>
+=======
+>>>>>>> 7d10fa8b626f6628fe2048abacd56bc663350081
