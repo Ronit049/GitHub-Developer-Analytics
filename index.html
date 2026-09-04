@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore public GitHub profiles, repositories, stars, languages, and activity."
+    />
+    <title>GitHub Analytics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="GitHub Analytics home">
+          <span class="brand-mark" aria-hidden="true">⌁</span>
+          <span>GitHub <strong>Analytics</strong></span>
+        </a>
+        <a class="github-link" href="https://github.com" target="_blank" rel="noreferrer">
+          GitHub API <span aria-hidden="true">↗</span>
+        </a>
+      </header>
+
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">DEVELOPER INTELLIGENCE / 01</p>
+        <h1 id="page-title">See the work<br /><em>behind the code.</em></h1>
+        <p class="hero-copy">
+          Turn any public GitHub profile into a clear picture of their projects, stack, and momentum.
+        </p>
+
+        <form class="search-panel" id="search-form">
+          <label for="username">GitHub username</label>
+          <div class="search-row">
+            <span class="at-symbol" aria-hidden="true">@</span>
+            <input id="username" name="username" type="text" placeholder="e.g. ronit-raj" autocomplete="off" required />
+            <button type="submit">Analyze <span aria-hidden="true">→</span></button>
+          </div>
+          <p class="search-hint">Public data only · No sign-in required</p>
+        </form>
+      </section>
+
+      <section id="empty-state" class="empty-state" aria-live="polite">
+        <div class="empty-orbit orbit-one"></div>
+        <div class="empty-orbit orbit-two"></div>
+        <div class="empty-content">
+          <span class="pulse-dot"></span>
+          <p>Ready to analyze</p>
+          <small>Enter a GitHub username to reveal the signals.</small>
+        </div>
+      </section>
+
+      <section id="loading-state" class="loading-state hidden" aria-live="polite">
+        <div class="scanner"><span></span></div>
+        <p>Reading public signals<span class="loading-dots">...</span></p>
+      </section>
+
+      <section id="error-state" class="error-state hidden" role="alert">
+        <span class="error-icon">!</span>
+        <div>
+          <strong id="error-title">Couldn’t find that profile</strong>
+          <p id="error-message">Check the username and try again.</p>
+        </div>
+      </section>
+
+      <section id="dashboard" class="dashboard hidden" aria-live="polite">
+        <div class="profile-header">
+          <div class="profile-identity">
+            <img id="avatar" src="" alt="" />
+            <div>
+              <p class="eyebrow">PROFILE OVERVIEW</p>
+              <h2 id="display-name">—</h2>
+              <a id="profile-url" href="#" target="_blank" rel="noreferrer">@username ↗</a>
+            </div>
+          </div>
+          <div class="updated-label"><span></span> LIVE PUBLIC DATA</div>
+        </div>
+
+        <div class="metrics-grid" aria-label="Profile metrics">
+          <article class="metric-card accent-orange">
+            <span class="metric-index">01</span><span class="metric-icon">✦</span>
+            <p>Total stars</p><strong id="total-stars">0</strong>
+            <small>Across public repositories</small>
+          </article>
+          <article class="metric-card accent-blue">
+            <span class="metric-index">02</span><span class="metric-icon">▦</span>
+            <p>Repositories</p><strong id="repo-count">0</strong>
+            <small id="repo-count-note">Public projects</small>
+          </article>
+          <article class="metric-card accent-lime">
+            <span class="metric-index">03</span><span class="metric-icon">♙</span>
+            <p>Followers</p><strong id="followers">0</strong>
+            <small id="following">Following 0</small>
+          </article>
+          <article class="metric-card accent-violet">
+            <span class="metric-index">04</span><span class="metric-icon">⑂</span>
+            <p>Total forks</p><strong id="total-forks">0</strong>
+            <small>Community reuse</small>
+          </article>
+        </div>
+
+        <div class="analysis-grid">
+          <article class="panel languages-panel">
+            <div class="panel-heading">
+              <div><p class="eyebrow">STACK SIGNAL</p><h3>Top languages</h3></div>
+              <span class="panel-number">01</span>
+            </div>
+            <div id="languages-list" class="languages-list"></div>
+            <p class="panel-footnote">Based on primary languages across public repositories.</p>
+          </article>
+
+          <article class="panel activity-panel">
+            <div class="panel-heading">
+              <div><p class="eyebrow">MOMENTUM</p><h3>Activity pulse</h3></div>
+              <span class="panel-number">02</span>
+            </div>
+            <div class="activity-score">
+              <strong id="activity-score">0</strong><span>/ 100</span>
+              <p id="activity-caption">Public activity signal</p>
+            </div>
+            <div class="activity-scale" aria-hidden="true"><span id="activity-bar"></span></div>
+            <div class="activity-details">
+              <div><span id="active-repos">0</span><small>updated in 90 days</small></div>
+              <div><span id="recent-events">0</span><small>recent public events</small></div>
+            </div>
+          </article>
+        </div>
+
+        <article class="panel repositories-panel">
+          <div class="panel-heading">
+            <div><p class="eyebrow">PROJECT GRAVITY</p><h3>Most popular repositories</h3></div>
+            <span class="panel-number">03</span>
+          </div>
+          <div id="repositories-list" class="repositories-list"></div>
+        </article>
+      </section>
+
+      <footer>Powered by the GitHub REST API · Built for public profiles</footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
