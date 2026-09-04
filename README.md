@@ -85,13 +85,13 @@ This project is available under the [MIT License](LICENSE).
 ## 🤝 Connect With Me
 
 <p align="center">
-  <a href="https://github.com/YOUR_USERNAME">
+  <a href="https://github.com/Ronit049">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-  <a href="YOUR_LINKEDIN_URL">
+  <a href="www.linkedin.com/in/ronit-raj7497">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
-  <a href="YOUR_PORTFOLIO_URL">
+  <a href="https://rsr-portfolio.vercel.app/">
     <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
 </p>
@@ -107,7 +107,6 @@ This project is available under the [MIT License](LICENSE).
 </p>
 
 <p align="center">
-  Made with ❤️ by <b>YOUR NAME</b>
+  Made with ❤️ by <b>Ronit Raj</b>
 </p>
-=======
->>>>>>> 7d10fa8b626f6628fe2048abacd56bc663350081
+
